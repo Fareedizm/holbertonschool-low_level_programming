@@ -1,6 +1,9 @@
 #ifndef CALC_H
 #define CALC_H
 
+#include <stdio.h>
+#include <stdlib.h>
+
 /* Structure for operations */
 typedef struct op
 {
@@ -17,4 +20,3 @@ int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
 #endif /* CALC_H */
-
