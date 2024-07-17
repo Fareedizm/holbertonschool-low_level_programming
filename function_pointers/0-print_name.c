@@ -1,23 +1,17 @@
-#include <stdio.h>
 #include "function_pointers.h"
+#include <stdio.h>
 
-/**
- * print_name_as_is - prints a name as is
- * @name: name of the person
- *
- * Return: Nothing.
- */
+void print_name(char *name, void (*f)(char *))
+{
+    if (name != NULL && f != NULL)
+        f(name);
+}
+
 void print_name_as_is(char *name)
 {
     printf("Hello, my name is %s\n", name);
 }
 
-/**
- * print_name_uppercase - print a name in uppercase
- * @name: name of the person
- *
- * Return: Nothing.
- */
 void print_name_uppercase(char *name)
 {
     unsigned int i;
@@ -38,16 +32,9 @@ void print_name_uppercase(char *name)
     }
     printf("\n");
 }
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
 int main(void)
 {
     print_name("Bob", print_name_as_is);
     print_name("Bob Dylan", print_name_uppercase);
-    return (0);
+    return 0;
 }
-
