@@ -1,4 +1,7 @@
+ude "3-calc.h"
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /* Function to add two integers */
 int op_add(int a, int b)
