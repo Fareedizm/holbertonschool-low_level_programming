@@ -7,4 +7,3 @@ int main(void)
     print_name("Bob Dylan", print_name_uppercase);
     return 0;
 }
-
